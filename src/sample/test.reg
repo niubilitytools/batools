@@ -1,0 +1,14 @@
+Windows Registry Editor Version 5.00
+[-HKEY_CLASSES_ROOT\Directory\shell\test]
+@="test"
+"NoWorkingDirectory"=""
+
+[-HKEY_CLASSES_ROOT\Directory\shell\test\command]
+@="cmd.exe /k \"pushd %L && title √¸¡ÓÃ· æ∑˚ && net start MSSQLSERVER && net start SQLBrowser && net start MsDtsServer110 && net start SQLWriter && net start SQLSERVERAGENT\""
+ 
+[-HKEY_CLASSES_ROOT\Directory\Background\shell\test]
+@="test"
+"NoWorkingDirectory"=""
+
+[-HKEY_CLASSES_ROOT\Directory\Background\shell\test\command]
+@="cmd.exe /s /k pushd \"%V\""

@@ -1,0 +1,7 @@
+Windows Registry Editor Version 5.00 
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Classes\Folder\shell\DeleteBinObj] 
+@="Delete BinObj Folders" 
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Classes\Folder\shell\DeleteBinObj\command] 
+@="cmd.exe /c \"TITLE Removing bin Folders in %1 && COLOR 9A && FOR /r \"%1\" %%f IN (bin obj) DO RD /s /q \"%%f\" \""

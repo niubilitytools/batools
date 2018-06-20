@@ -1,0 +1,42 @@
+Windows Registry Editor Version 5.00
+
+; 目录上添加命令
+[HKEY_CLASSES_ROOT\Directory\shell\runas]
+@="在此处以管理员身份运行命令提示符"
+"NoWorkingDirectory"=""
+
+[HKEY_CLASSES_ROOT\Directory\shell\runas\command]
+@="cmd.exe /k \"pushd %L && title 命令提示符\""
+
+[HKEY_CLASSES_ROOT\Directory\Background\shell\runas]
+@="在此处以管理员身份运行命令提示符"
+"NoWorkingDirectory"=""
+
+[HKEY_CLASSES_ROOT\Directory\Background\shell\runas\command]
+@="cmd.exe /s /k pushd \"%V\""
+
+; 驱动器上添加
+
+[HKEY_CLASSES_ROOT\Drive\shell\runas]
+@="在此处以管理员身份运行命令提示符"
+"NoWorkingDirectory"=""
+
+[HKEY_CLASSES_ROOT\Drive\shell\runas\command]
+@="cmd.exe /k \"pushd %L && title 命令提示符\""
+
+
+; 库上添加命令
+
+[HKEY_CLASSES_ROOT\LibraryFolder\shell\runas]
+@="在此处以管理员身份运行命令提示符"
+"NoWorkingDirectory"=""
+
+[HKEY_CLASSES_ROOT\LibraryFolder\shell\runas\command]
+@="cmd.exe /k \"pushd %L && title 命令提示符\""
+
+[HKEY_CLASSES_ROOT\LibraryFolder\Background\shell\runas]
+@="在此处以管理员身份运行命令提示符"
+"NoWorkingDirectory"=""
+
+[HKEY_CLASSES_ROOT\LibraryFolder\Background\shell\runas\command]
+@="cmd.exe /s /k pushd \"%V\""

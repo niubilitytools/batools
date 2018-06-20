@@ -1,0 +1,47 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27703.2026
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Runas", "src\Runas\Runas.csproj", "{386D910F-C66D-426B-8864-319E8618819D}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Sample", "Sample", "{CD15E31A-963F-4F2C-9786-81ECCED27970}"
+	ProjectSection(SolutionItems) = preProject
+		src\sample\add Start&Stop Sql services.bat = src\sample\add Start&Stop Sql services.bat
+		src\sample\AdministratorCmd&Here.reg = src\sample\AdministratorCmd&Here.reg
+		src\sample\Cmd&Here.reg = src\sample\Cmd&Here.reg
+		src\sample\CommandAdd.bat = src\sample\CommandAdd.bat
+		src\sample\CommandDelete.bat = src\sample\CommandDelete.bat
+		src\sample\CommandLine.dll = src\sample\CommandLine.dll
+		src\sample\CommandLine.xml = src\sample\CommandLine.xml
+		src\sample\kill-bin_obj-folders.reg = src\sample\kill-bin_obj-folders.reg
+		src\sample\kill-svn-folders.reg = src\sample\kill-svn-folders.reg
+		src\sample\ProxyAuto.bat = src\sample\ProxyAuto.bat
+		src\sample\ProxyDisable.bat = src\sample\ProxyDisable.bat
+		src\sample\ProxyIp.bat = src\sample\ProxyIp.bat
+		src\sample\startsql.bat = src\sample\startsql.bat
+		src\sample\stopsql.bat = src\sample\stopsql.bat
+		src\sample\test.reg = src\sample\test.reg
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		DebugAndRelease|Any CPU = DebugAndRelease|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{386D910F-C66D-426B-8864-319E8618819D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{386D910F-C66D-426B-8864-319E8618819D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{386D910F-C66D-426B-8864-319E8618819D}.DebugAndRelease|Any CPU.ActiveCfg = DebugAndRelease|Any CPU
+		{386D910F-C66D-426B-8864-319E8618819D}.DebugAndRelease|Any CPU.Build.0 = DebugAndRelease|Any CPU
+		{386D910F-C66D-426B-8864-319E8618819D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{386D910F-C66D-426B-8864-319E8618819D}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {7A9BF140-1634-467F-8429-F895626F5F88}
+	EndGlobalSection
+EndGlobal

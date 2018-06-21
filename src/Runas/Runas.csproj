@@ -86,6 +86,11 @@
       <UserProperties BuildVersion_StartDate="2000/1/1" />
     </VisualStudio>
   </ProjectExtensions>
+  <PropertyGroup>
+    <PostBuildEvent>xcopy $(TargetDir)*.exe $(SolutionDir)src\sample\   /c /d /e /h /i /k /q /r /s /x /y
+xcopy $(TargetDir)*.dll $(SolutionDir)src\sample\   /c /d /e /h /i /k /q /r /s /x /y
+xcopy $(TargetDir)*.config $(SolutionDir)src\sample\   /c /d /e /h /i /k /q /r /s /x /y</PostBuildEvent>
+  </PropertyGroup>
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
   <Target Name="BeforeBuild">

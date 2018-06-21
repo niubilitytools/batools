@@ -193,3 +193,5 @@ $RECYCLE.BIN/
 !*/[Bb]in/[Ww]eb.config
 */.vs/*
 .vs/*
+/src/sample/Runas.exe
+/src/sample/Runas.exe.config

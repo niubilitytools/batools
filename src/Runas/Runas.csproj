@@ -7,8 +7,8 @@
     <ProjectGuid>{386D910F-C66D-426B-8864-319E8618819D}</ProjectGuid>
     <OutputType>Exe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Runner</RootNamespace>
-    <AssemblyName>Runner</AssemblyName>
+    <RootNamespace>Runas</RootNamespace>
+    <AssemblyName>Runas</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -26,6 +26,7 @@
     <UseVSHostingProcess>false</UseVSHostingProcess>
     <Prefer32Bit>false</Prefer32Bit>
     <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+    <RunCodeAnalysis>true</RunCodeAnalysis>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -39,7 +40,7 @@
     <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <PropertyGroup>
-    <StartupObject />
+    <StartupObject>Runas.Program</StartupObject>
   </PropertyGroup>
   <PropertyGroup>
     <SignAssembly>true</SignAssembly>
@@ -64,13 +65,13 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="RunState.cs" />
-    <Compile Include="RunnerOptions.cs" />
+    <Compile Include="MessageState.cs" />
+    <Compile Include="MessageStateBase.cs" />
     <Compile Include="IOptions.cs" />
+    <Compile Include="Options.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="State.cs" />
-    <Compile Include="StateBase.cs" />
     <Compile Include="UserState.cs" />
     <Compile Include="WindowsSecurityUtil.cs" />
   </ItemGroup>

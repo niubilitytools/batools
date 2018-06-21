@@ -4,26 +4,26 @@
 
     internal interface IOptions
     {
+        [Value(0, MetaName = "path",
+         HelpText = "It's full path of running file and must be exist.", Required = true)]
+        string FileName { get; set; }
+
         [Option('u', "username", SetName = "byUser",
             HelpText =
-                "run the file with this account, please keep None/Empty if you would like to run the file with current account"
+                "Running file under this account, can be None/Empty if using current account, also can be like \"domain\\username\""
             )]
         string UserName { get; set; }
 
-        [Option('d', "domain", SetName = "byUser", HelpText = "domain of account")]
+        [Option('d', "domain", SetName = "byUser", HelpText = "Domain of account")]
         string Domain { get; set; }
 
-        [Option('p', "password", SetName = "byUser", HelpText = "password of account")]
+        [Option('p', "password", SetName = "byUser", HelpText = "Password for the account, use quotation liked \"space and special chars\"")]
         string Password { get; set; }
 
-        [Option('a', "arguments", HelpText = "arguments of exe file")]
+        [Option('a', "arguments", HelpText = "Arguments for running file")]
         string Arguments { get; set; }
 
-        [Option('s', "selfcall", HelpText = "")]
+        [Option('s', "selfcall", Hidden = true, HelpText = "")]
         bool IsSelfcall { get; set; }
-
-        [Value(0, MetaName = "exe file full path",
-            HelpText = "full path, this is must be required and this file must exist.", Required = true)]
-        string FileName { get; set; }
     }
 }

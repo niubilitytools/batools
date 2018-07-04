@@ -195,3 +195,4 @@ $RECYCLE.BIN/
 .vs/*
 /src/sample/Runas.exe
 /src/sample/Runas.exe.config
+/tools/ProxyIp.bat

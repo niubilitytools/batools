@@ -196,3 +196,11 @@ $RECYCLE.BIN/
 /src/sample/Runas.exe
 /src/sample/Runas.exe.config
 /tools/ProxyIp.bat
+/systools/URLProtocolView.cfg
+/systools/InstalledPackagesView.cfg
+/systools/FullEventLogView.cfg
+/systools/FolderTimeUpdate.cfg
+/systools/FolderChangesView.cfg
+/systools/FileTypesMan.cfg
+/systools/EventLogChannelsView.cfg
+/systools/BlueScreenView.cfg

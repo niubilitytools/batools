@@ -23,20 +23,27 @@ namespace Runas
                 throw new ArgumentNullException(nameof(options));
             }
 
-            using (var identity = WindowsIdentity.GetCurrent())
+            using (WindowsIdentity identity = WindowsIdentity.GetCurrent())
+            {
                 if (new WindowsPrincipal(identity).IsInRole(WindowsBuiltInRole.Administrator))
                 {
                     return UserState.Administrator;
                 }
+            }
+
             if (options.IsSelfcall)
             {
+                // failed to get permision after ron 2nd
                 return UserState.NoAdministrator;
             }
             if (options == null)
+            {
                 throw new ArgumentNullException(nameof(options), "the arguments can't be nothing");
+            }
+
             options.IsSelfcall = true;
-            // prepare a new process start infomation
-            var startInfo = new ProcessStartInfo
+            // prepare a new process start infomation to try get permission again
+            ProcessStartInfo startInfo = new ProcessStartInfo
             {
                 FileName = executablePath,
                 Arguments = Parser.Default.FormatCommandLine(options),

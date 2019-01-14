@@ -16,11 +16,10 @@ namespace Runas
                         new Options
                         {
                             FileName = "%windir%\\system32\\notepad.exe",
-                            UserName = "apac\\u rsid",
+                            UserName = "apac\\userid",
                             Domain = "",
                             Password = "^%$&*H S^W^",
                             //Arguments = "--password \" ^%$&*H S ^ W ^ \" --username \"apac\\u rsid\" %windir%\\system32\\notepad.exe"
-
                         });
             }
         }

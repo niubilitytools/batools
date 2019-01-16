@@ -2,22 +2,23 @@
 
 
 Set-Location 'C:\TANGJ15\code\00 Modularity'
-Get-ChildItem -Recurse -Directory -Hidden  -Filter .git | ForEach-Object {
-    $tempgitname = $_.Parent.Name, "tmpgit" -join ""
-    $temppath = join-path  $_.Parent.Parent.FullName $tempgitname
+Get-ChildItem -Recurse -Directory -Hidden  -Filter .git | ForEach-Object 
+{
+    $tempgitname = $_.Directory.Name, "tmpgit" -join "_"
+    $temppath = join-path  $_.Directory.FullName $tempgitname
     $originalgitObjects = Join-Path $_.FullName "objects" 
     $targetgitobjects = join-path $temppath "objects"
     $targetgitshallow = join-path $temppath "objects"
     $sourcerepo = "file://", $_.Parent.FullName -join ""
-    try {
+   
+     try {
         # git clone --mirror --depth=1 -l $sourcerepo $temppath 
         set-location $_.Parent.FullName
         git reflog expire --all --expire=now 
         git gc --prune=now --aggressive
         git remote rm origin || true
         #git tag | xargs git tag -d
-        git branch -D in || true 
-        (
+        git branch -D in || true (
             cd .git
             rm -rf refs/remotes/ refs/original/ *_HEAD logs/
         )

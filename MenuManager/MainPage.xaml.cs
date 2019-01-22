@@ -15,5 +15,10 @@ namespace MenuManager
         private void RelativePanel_Loaded(object sender, Windows.UI.Xaml.RoutedEventArgs e)
         {
         }
+
+        private void Page_Loaded(object sender, Windows.UI.Xaml.RoutedEventArgs e)
+        {
+            //menuTree.DataContext
+        }
     }
 }

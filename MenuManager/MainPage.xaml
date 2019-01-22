@@ -2,28 +2,32 @@
     x:Class="MenuManager.MainPage"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-    xmlns:local="using:MenuManager"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-    xmlns:controls="using:Windows.UI.Xaml.Controls"
     mc:Ignorable="d"
-    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}" Loaded="Page_Loaded">
 
     <RelativePanel Loaded="RelativePanel_Loaded">
-        <SplitView HorizontalAlignment="Center" Height="0" VerticalAlignment="Center" Width="320">
+        <SplitView HorizontalAlignment="Center" VerticalAlignment="Center" Height="500">
             <SplitView.Pane>
                 <ScrollViewer>
-                    <TreeView x:Name="menuTree" SelectionMode="Multiple" HorizontalAlignment="Stretch" Height="0" Margin="0,0,0,0" VerticalAlignment="Stretch" Width="0" />
+                    <TreeView x:Name="menuTree" SelectionMode="Multiple" HorizontalAlignment="Stretch" Margin="0,0,0,0" VerticalAlignment="Stretch">
+                        <TreeView.RootNodes>
+                            <TreeViewNode  Content="n1" />
+                            <TreeViewNode Content="n2" />
+                            <TreeViewNode Content="n3" />
+                        </TreeView.RootNodes>
+                    </TreeView>
                 </ScrollViewer>
             </SplitView.Pane>
             <ScrollViewer>
-                <StackPanel HorizontalAlignment="Stretch" Height="0" Margin="0,0,0,0" VerticalAlignment="Stretch" Width="320">
-                    <CheckBox Content="Device" x:Name="Device" HorizontalAlignment="Left" Margin="0,0,0,0" VerticalAlignment="Top" />
-                    <CheckBox x:Name="Directory" Content="Directory" HorizontalAlignment="Left" Margin="0,0,0,0" VerticalAlignment="Top" />
-                    <CheckBox x:Name="Directory_Background" Content="Directory_Background" HorizontalAlignment="Left" Margin="0,0,0,0" VerticalAlignment="Top" />
-                    <CheckBox x:Name="Library" Content="Library" HorizontalAlignment="Left" Margin="0,0,0,0" VerticalAlignment="Top" />
-                    <CheckBox Content="Device" x:Name="Library_Background" HorizontalAlignment="Left" Margin="0,0,0,0" VerticalAlignment="Top" />
-                </StackPanel>
+                <RelativePanel HorizontalAlignment="Stretch" Margin="0,0,0,0" VerticalAlignment="Stretch" Width="320">
+                    <CheckBox Content="Device" x:Name="Device" HorizontalAlignment="Center" VerticalAlignment="Top" />
+                    <CheckBox x:Name="Directory" Content="Directory" HorizontalAlignment="Center" Margin="0,32,0,0" VerticalAlignment="Top" />
+                    <CheckBox x:Name="Directory_Background" Content="Directory_Background" HorizontalAlignment="Center" Margin="0,64,0,0" VerticalAlignment="Top" />
+                    <CheckBox x:Name="Library" Content="Library" HorizontalAlignment="Center" Margin="0,96,0,0" VerticalAlignment="Top" />
+                    <CheckBox Content="Device" x:Name="Library_Background" HorizontalAlignment="Center" Margin="0,128,0,0" VerticalAlignment="Top" />
+                </RelativePanel>
             </ScrollViewer>
         </SplitView>
     </RelativePanel>

@@ -1,15 +1,30 @@
 ﻿using Microsoft.Win32;
 using System;
-using System.Security.AccessControl;
+using System.Collections.ObjectModel;
 
 namespace MenuManager
 {
-    public static class RegisteryExtension
+    public class Item
     {
-        public static RegistryKey OpenSubKey(this RegistryKey _, string name)
+        public string Name { get; set; }
+        public ObservableCollection<Item> Children { get; set; } = new ObservableCollection<Item>();
+
+        public bool OnDirectory { get; set; }
+        public bool OnDirectoryBackground { get; set; }
+
+        public bool OnDrive { get; set; }
+
+        public bool OnLibraryFolder { get; set; }
+        public bool OnLibraryFolderBackground { get; set; }
+
+        public override string ToString()
         {
-            return _.OpenSubKey(name, RegistryRights.ChangePermissions);
+            return Name;
         }
+    }
+
+    internal class MenuItem
+    {
     }
 
     internal class RegistryHelper
